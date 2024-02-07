@@ -1,34 +1,19 @@
 #!/usr/bin/node
 
-function factorial(n) {
-  const num = parseInt(n);
-
-  if (isNaN(num)) {
-    return 1;
-  } else if (num === 0 || num === 1) {
-    return 1;
-  } else {
-    return num * factorial(num - 1);
+function large (n) {
+let biggest = n[0];
+//let biggest = process.argv[2];
+//for (let i = 2; i < process.argv.length; i++) {
+for (let i = 0; i < n.length; i++) {
+  if (n[i] > biggest) {
+ // if (process.argv[i] > biggest) {
+    //biggest = process.argv[i];
+    biggest = n[i];
   }
 }
+// console.log(biggest);
+return biggest;
+}
 
-const input = process.argv[2];
-console.log(factorial(input));
-
-
-// #!/usr/bin/node
-
-// function factorial(n) {
-//   const num = parseInt(n);
-
-//   if (isNaN) {
-//     return 1;
-//   } else if (num === 0 || num === 1) {
-//     return 1;
-//   } else {
-//     return num * factorial(num - 1);
-//   }
-// }
-
-// const input = process.argv[2];
-// console.log(factorial(input));
+let num = [2, 21, 4, 170];
+console.log(large(num));
